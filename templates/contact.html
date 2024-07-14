@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+{% block title %}
+    {{ disease }} Fertilizers and Fungicides
+{% endblock %}
+
+{% block content %}
+    <h1>{{ disease }} Fertilizers</h1>
+    {% if disease == "Early Blight" %}
+    <h2>Treatment Measures for Early Blight</h2>
+    <ul>
+        <li>Pyraclostrobin (Headline):Apply pyraclostrobin at a rate of 6 to 12 fluid ounces per acre as a foliar spray, beginning at the first sign of early blight and repeating every 7 to 14 days as needed, ensuring thorough coverage of the foliage.</li>
+        <li>Boscalid:Apply boscalid at a rate of 4 to 7 ounces per acre, starting at the onset of disease or when conditions are favorable for early blight, with subsequent applications every 7 to 14 days to maintain control.</li>
+        <li>Azoxystrobin:Apply azoxystrobin at a rate of 6 to 15.5 fluid ounces per acre as a foliar spray, initiating treatment when early blight is first detected and repeating every 7 to 14 days to ensure continuous protection.</li>
+        <li>Difenoconazole:Apply difenoconazole at a rate of 4 to 8 fluid ounces per acre, beginning at the first sign of early blight or preventatively when conditions favor disease development, with follow-up applications every 7 to 10 days as necessary.</li>
+        <li>Copper-based fungicides:To apply copper-based fungicides effectively, carefully follow label instructions, mix the fungicide with water according to specifications, and evenly spray the solution onto all plant surfaces using calibrated equipment.</li>
+    </ul>
+    <h2>Fertilizers</h2>
+    <ul>
+        <li>Nitrogen (N) fertilizer application ranges from 100 to 150 pounds per acre.</li>
+        <li>Potassium (K) fertilizer application typically ranges from 50 to 100 pounds per acre.</li>
+    </ul>
+    <h3>Favorable Conditions for Early Blight</h3>
+    <ul>
+        <li>High humidity.</li>
+        <li>Low temperature and prolonged leaf wetness.</li>
+    </ul>
+    {% elif disease == "Late Blight" %}
+    <h2>Treatment Measures for Late Blight</h2>
+    <ul>
+        <li>Acrobat:Apply Acrobat at a rate of 10-14 fluid ounces per acre, ensuring thorough coverage of potato foliage to effectively manage late blight.</li>
+        <li>Use Chlorothalonil at a rate of 1.5-2.5 pounds per acre, ensuring complete coverage of plant surfaces to protect against late blight infection.</li>
+        <li>Apply Mancozeb at a rate of 1.5-3 pounds per acre, ensuring uniform coverage of foliage to provide protection against late blight.</li>
+        <li>If using a product containing EBDC fungicides like Mancozeb, follow label instructions for application rates suitable for late blight control.</li>
+        <li>Apply Dimethomorph at a rate of 4-8 fluid ounces per acre, ensuring even distribution on potato plants to inhibit late blight development.</li>
+        <li>Apply Azoxystrobin at a rate of 6-15.5 fluid ounces per acre, following label instructions for optimal application timing and intervals to manage late blight effectively</li>
+    </ul>
+    <h2>Fertilizers</h2>
+    <ul>
+        <li> Nitrogen (N) fertilizer application ranges from 100 to 150 pounds per acre.</li>
+        <li>Potassium (K) fertilizer application typically ranges from 50 to 100 pounds per acre.</li>
+        <li>Keep phosphorus levels low. While phosphorus is essential, excessive levels can exacerbate disease severity.</li>
+    </ul>
+    <h3>Favorable Conditions for Late Blight</h3>
+    <ul>
+        <li>Warm, rainy, and wet weather conditions.</li>
+    </ul>
+    {% elif disease == "Healthy" %}
+    <h2>Recommended Care for Healthy Plants</h2>
+    <ul>
+        <li>Use balanced N-P-K fertilizers to maintain plant health.</li>
+        <li>Apply micronutrient supplements as needed for optimal growth.</li>
+        <li>Incorporate organic matter to enrich soil and promote nutrient availability.</li>
+    </ul>
+    {% else %}
+    <p>No specific recommendations available for this class.</p>
+    {% endif %}
+{% endblock %}

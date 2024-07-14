@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+
+{% block title %}
+    {{ disease }} Information
+{% endblock %}
+
+{% block content %}
+    <!-- <style>
+        body {
+            background-color: #000; /* Black background */
+            color: #fff; /* White text */
+            padding: 20px;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            color: #4CAF50; /* Green headings */
+        }
+        a {
+            color: #4CAF50; /* Green links */
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        p {
+            line-height: 1.6; 
+        }
+        ul {
+            padding-left: 20px;
+        }
+    </style> -->
+
+    <h1>{{ disease }} Information</h1>
+    {% if disease == 'Early Blight' %}
+        <p><strong>Symptoms:</strong> Early blight typically manifests as small, brown lesions on older leaves. These lesions often have concentric rings, giving them a target-like appearance. As the disease progresses, the spots can merge and cause the leaf to yellow and die. It can also affect stems and fruit.</p>
+        <p><strong>Causes:</strong> The disease is caused by the fungus <i>Alternaria solani</i>, which thrives in warm, humid conditions. It can spread through infected plant debris, seeds, and soil.</p>
+        <p><strong>Effects:</strong> If left untreated, early blight can cause significant defoliation, reducing the plant’s ability to photosynthesize and ultimately leading to reduced yield and quality of the potato tubers.</p>
+        <h4>Preventive Measures:</h4>
+        <ul>
+            <li>Crop Rotation: Avoid planting potatoes or other solanaceous crops (like tomatoes) in the same location for consecutive years.</li>
+            <li>Resistant Varieties: Plant potato varieties that are resistant to early blight.</li>
+            <li>Proper Irrigation: Water plants at the base to avoid wetting the foliage, which can promote fungal growth. Ensure good spacing between plants to allow air circulation.</li>
+            <li>Sanitation: Remove and destroy infected plant debris and practice good garden hygiene to reduce sources of the fungus.</li>
+        </ul>
+        <h4>Treatment Options:</h4>
+        <ul>
+            <li>Chemical Treatments: Fungicides such as chlorothalonil, mancozeb, or copper-based fungicides can be effective if applied early and regularly.</li>
+            <li>Non-Chemical Treatments: Use of biocontrol agents like <i>Trichoderma</i> spp. and maintaining healthy soil with good organic matter can help in suppressing the disease.</li>
+        </ul>
+    {% elif disease == 'Late Blight' %}
+        <p><strong>Symptoms:</strong> Late blight causes irregularly shaped, water-soaked lesions on leaves and stems. These lesions can turn brown and black, and white fungal growth may appear on the undersides of the leaves. It can also cause dark, sunken lesions on tubers.</p>
+        <p><strong>Causes:</strong> The disease is caused by the oomycete <i>Phytophthora infestans</i>. It spreads rapidly in cool, wet conditions and can be dispersed by wind and rain.</p>
+        <p><strong>Effects:</strong> Late blight is a devastating disease that can destroy entire fields within a few days under favorable conditions. It leads to significant yield losses and can render tubers unmarketable due to rot.</p>
+        <h4>Preventive Measures:</h4>
+        <ul>
+            <li>Crop Rotation: Rotate crops and avoid planting potatoes in the same field for at least two to three years.</li>
+            <li>Resistant Varieties: Choose potato varieties that have resistance to late blight.</li>
+            <li>Proper Irrigation: Avoid overhead irrigation and ensure good drainage to reduce humidity around the plants.</li>
+            <li>Sanitation: Remove and destroy infected plants and volunteer potatoes that can harbor the pathogen.</li>
+        </ul>
+        <h4>Treatment Options:</h4>
+        <ul>
+            <li>Chemical Treatments: Fungicides containing metalaxyl, mefenoxam, or propamocarb are effective against late blight. They should be applied preventatively and continued during periods of high risk.</li>
+            <li>Non-Chemical Treatments: Use of disease-free seed potatoes and practicing good field hygiene can help manage the disease. Some organic treatments include copper-based fungicides and biocontrol agents.</li>
+        </ul>
+    {% elif disease == 'Healthy' %}
+        <p><strong>Symptoms:</strong> Healthy potato plants have robust, green leaves without any spots or lesions. The plants should be free of yellowing, wilting, or stunted growth, and they should produce a good number of tubers without any signs of disease.</p>
+        <p><strong>Causes:</strong> Healthy conditions are maintained through proper agricultural practices, good seed quality, and favorable environmental conditions.</p>
+        <p><strong>Effects:</strong> Healthy potato plants result in higher yields, better quality tubers, and increased resistance to diseases and pests.</p>
+    {% endif %}
+{% endblock %}

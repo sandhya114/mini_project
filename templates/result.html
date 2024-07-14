@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block title %}Prediction Result{% endblock %}
+
+{% block content %}
+    <h1>Prediction Result</h1>
+    <p>Prediction: {{ prediction }}</p>
+    <img src="{{ url_for('static', filename='uploads/' + image_filename) }}" alt="Uploaded Image">
+    <br>
+    <a href="{{ url_for('home') }}">Upload another image</a>
+{% endblock %}
